@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareConnect | Home - Healthcare Management</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo"><i class="fas fa-stethoscope"></i> CareConnect</div>
+        <div class="user-profile">
+            <input type="search" placeholder="Search Doctors or Services..." class="search-input">
+            <span>Welcome, Patient!</span>
+            <i class="fas fa-user-circle"></i>
+        </div>
+    </header>
+
+    <main class="dashboard-layout">
+        <nav class="sidebar">
+            <ul>
+                <li class="nav-item active"><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li class="nav-item"><a href="appointment.html"><i class="fas fa-calendar-alt"></i> Book Appointment</a></li>
+                <li class="nav-item"><a href="doctors.html"><i class="fas fa-user-md"></i> Doctor Info Cards</a></li>
+                <li class="nav-item"><a href="check_status.html"><i class="fas fa-clipboard-check"></i> Appointment Status</a></li>
+                <li class="nav-item"><a href="test_booking.html"><i class="fas fa-syringe"></i> Test Booking</a></li>
+                <li class="nav-item"><a href="test_status.html"><i class="fas fa-vials"></i> Test Status</a></li>
+                <li class="nav-item"><a href="network.html"><i class="fas fa-hospital"></i> Hospital Network</a></li>
+                <li class="nav-item"><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+            </ul>
+        </nav>
+
+        <section class="content-area">
+            <h2>Quick Access Dashboard</h2>
+            <div id="quick-access-grid" class="cards-container">
+                <div class="quick-card" onclick="window.location.href='appointment.html'"><i class="fas fa-calendar-plus fa-3x"></i><h3>Book Appointment</h3><p>Find & schedule your doctor visit instantly.</p></div>
+                <div class="quick-card" onclick="window.location.href='doctors.html'"><i class="fas fa-user-md fa-3x"></i><h3>View Doctor Info</h3><p>Browse specialists and read their profiles.</p></div>
+                <div class="quick-card" onclick="window.location.href='check_status.html'"><i class="fas fa-clock fa-3x"></i><h3>Appointment Status</h3><p>Track your current bookings.</p></div>
+                <div class="quick-card" onclick="window.location.href='test_booking.html'"><i class="fas fa-syringe fa-3x"></i><h3>Medical Test Booking</h3><p>Schedule lab tests from our network.</p></div>
+                <div class="quick-card" onclick="window.location.href='test_status.html'"><i class="fas fa-vials fa-3x"></i><h3>Test Status & Results</h3><p>Check the status of your booked medical tests.</p></div>
+                <div class="quick-card" onclick="window.location.href='network.html'"><i class="fas fa-hospital-alt fa-3x"></i><h3>Hospital Network</h3><p>Locate hospitals and clinics near you.</p></div>
+                <div class="quick-card" onclick="window.location.href='about.html'"><i class="fas fa-info-circle fa-3x"></i><h3>About CareConnect</h3><p>Learn more about our mission.</p></div>
+            </div>
+
+            <h2 style="margin-top: 40px;">Featured Doctors</h2>
+            <div id="featured-doctors-container" class="cards-container">
+                <!-- Featured Doctor Info Cards injected by JS -->
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

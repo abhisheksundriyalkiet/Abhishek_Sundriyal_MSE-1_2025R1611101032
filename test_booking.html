@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareConnect | Medical Test Booking</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo"><i class="fas fa-stethoscope"></i> CareConnect</div>
+        <div class="user-profile">
+            <input type="search" placeholder="Search Doctors or Services..." class="search-input">
+            <span>Welcome, Patient!</span>
+            <i class="fas fa-user-circle"></i>
+        </div>
+    </header>
+
+    <main class="dashboard-layout">
+        <nav class="sidebar">
+            <ul>
+                <li class="nav-item"><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li class="nav-item"><a href="appointment.html"><i class="fas fa-calendar-alt"></i> Book Appointment</a></li>
+                <li class="nav-item"><a href="doctors.html"><i class="fas fa-user-md"></i> Doctor Info Cards</a></li>
+                <li class="nav-item"><a href="check_status.html"><i class="fas fa-clipboard-check"></i> Appointment Status</a></li>
+                <li class="nav-item active"><a href="test_booking.html"><i class="fas fa-syringe"></i> Test Booking</a></li>
+                <li class="nav-item"><a href="test_status.html"><i class="fas fa-vials"></i> Test Status</a></li>
+                <li class="nav-item"><a href="network.html"><i class="fas fa-hospital"></i> Hospital Network</a></li>
+                <li class="nav-item"><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+            </ul>
+        </nav>
+
+        <section class="content-area">
+            <h2>Schedule a Diagnostic Test</h2>
+            <div class="booking-form-section">
+                <form id="test-booking-form" class="booking-form-card">
+                    <div class="form-group">
+                        <label for="test-type">Select Test:</label>
+                        <select id="test-type" required>
+                            <option value="" disabled selected>Choose a Test</option>
+                            <option value="Blood">Complete Blood Count (CBC)</option>
+                            <option value="XRay">X-Ray (Chest)</option>
+                            <option value="Thyroid">Thyroid Profile</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="lab-location">Preferred Lab Location:</label>
+                        <select id="lab-location" required>
+                            <option value="" disabled selected>Select Lab</option>
+                            <option value="Central">Central Lab Network</option>
+                            <option value="North">Northside Diagnostics</option>
+                        </select>
+                    </div>
+                    <div class="form-group date-group">
+                        <label for="test-date">Date Selection:</label>
+                        <input type="date" id="test-date" required>
+                        <small id="test-date-error" class="error-message"></small>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Book Test</button>
+                    </div>
+                </form>
+                <div id="test-booking-result" class="alert-success" style="display: none;"></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
